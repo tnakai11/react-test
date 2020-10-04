@@ -137,25 +137,25 @@ export default function NavigationBar() {
         <AppBar position="static" style={{ background: lightBlue[50]}} >
             <Toolbar>
             <Box position="" margin="auto">
-                <RouterLink to="/" 
+                <RouterLink to="/react-test/" 
                     onMouseEnter={handlePopoverHomeOpen}
                     onMouseLeave={handlePopoverHomeClose}>
                     <HomeIcon style={ {color: lightBlue[400],}}/>
                 </RouterLink>
-                <RouterLink to="/counter"
+                <RouterLink to="/react-test/counter"
                     onMouseEnter={handlePopoverCounterOpen}
                     onMouseLeave={handlePopoverCounterClose}>
                     <PlusOneIcon style={{ color: lightBlue[400] }}/>
                 </RouterLink>
-                <RouterLink to="/timer"
+                <RouterLink to="/react-test/timer"
                     onMouseEnter={handlePopoverTimerOpen}
                     onMouseLeave={handlePopoverTimerClose}>
                     <AlarmIcon style={{ color: lightBlue[400] }}/>
                 </RouterLink>
                 
-                <Route exact path="/"><Typography style={{ color: lightBlue[400] }}>Home</Typography></Route>
-                <Route path="/counter"><Typography style={{ color: lightBlue[400] }}>Counter</Typography></Route>
-                <Route path="/timer"><Typography style={{ color: lightBlue[400] }}>Timer</Typography></Route>
+                <Route exact path="/react-test/"><Typography style={{ color: lightBlue[400] }}>Home</Typography></Route>
+                <Route path="/react-test/counter"><Typography style={{ color: lightBlue[400] }}>Counter</Typography></Route>
+                <Route path="/react-test/timer"><Typography style={{ color: lightBlue[400] }}>Timer</Typography></Route>
             </Box>
             </Toolbar>
         </AppBar>

@@ -15,9 +15,9 @@ function App() {
         <header className="App-header">
           <NavigationBar/>
         </header>
-        <Route exact path="/"><Home/></Route>
-        <Route exact path="/counter"><Counter/></Route>
-        <Route exact path="/timer"><Timer /></Route>
+        <Route exact path="/react-test/"><Home/></Route>
+        <Route path="/react-test/counter"><Counter/></Route>
+        <Route path="/react-test/timer"><Timer /></Route>
       </Router>
     </Box>
     
