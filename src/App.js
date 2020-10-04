@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Home from "./Home"
+import Counter from "./Counter"
+import Timer from "./Timer"
+import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import Box from '@material-ui/core/Box';
+import NavigationBar from './NavigationBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Box className="App">
+      <Router>
+        <header className="App-header">
+          <NavigationBar/>
+        </header>
+        <Route exact path="/"><Home/></Route>
+        <Route exact path="/counter"><Counter/></Route>
+        <Route exact path="/timer"><Timer /></Route>
+      </Router>
+    </Box>
+    
   );
+
+  
 }
 
 export default App;
